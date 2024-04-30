@@ -1,0 +1,63 @@
+<div class="app-container">
+    <div class="header">
+        <img src="../../../assets/figures.png" class="figures">
+        <p class="header-font">Comunicación escrita</p>
+        <div class="buttons">
+            <a class="menu" href="#">
+                <mat-icon>menu</mat-icon>
+                Menú
+            </a>
+            <a class="menu" href="#">
+                <mat-icon>help_outline</mat-icon>
+                Ayuda
+            </a>
+            <a class="menu" href="#">
+                <mat-icon>travel_explore</mat-icon>
+                Tour
+            </a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <img src="../../../assets/logo unad.png" class="logo-unad">
+            <mat-accordion class="main-accordion">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header  [ngClass]="{ 'highlighted': isAnySubmenuSelected() }">
+                        <mat-panel-title style="font-size: 18px" [ngClass]="{ 'highlighted': isAnySubmenuSelected() }">
+                            Introducción
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="submenus">
+                        <a mat-raised-button class="submenu" (click)="selectSubmenu('activity1')"
+                            [ngClass]="{ 'selected': isSelected('activity1') }"
+                            [routerLink]="'/introduccion/activity1'">
+                            <div class=" button-content">
+                                <li class="textList list-disc"></li>
+                                <p class="textList my-2">Actividad 1</p>
+                            </div>
+                        </a>
+                        <a mat-raised-button class="submenu" [routerLink]="'/introduccion/activity2'"
+                            (click)="selectSubmenu('activity2')" [ngClass]="{ 'selected': isSelected('activity2') }">
+                            <div class="button-content">
+                                <li class="textList list-disc"></li>
+                                <p class="textList my-2">Actividad 2</p>
+                            </div>
+                        </a>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title style="font-size: 18px">
+                            Explicación
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+
+        <div class="app-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

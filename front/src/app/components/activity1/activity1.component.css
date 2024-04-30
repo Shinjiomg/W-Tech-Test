@@ -1,0 +1,52 @@
+.blue-border-card {
+    padding: 16px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    width: 75rem;
+    box-shadow: 0px, 18px, 16px, 6px, rgba(0, 0, 0, 0.37);
+    border: 1px solid #005883;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+}
+
+.title {
+    color: #005883;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.border {
+    border: 2px solid #005883;
+    margin-bottom: 1rem;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-card {
+    padding: 16px;
+    border-radius: 0px;
+    border: 1px solid black;
+}
+
+.accordion-container {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.accordion-main {
+    border: 1px solid black;
+    border-radius: 0 !important;
+}
+
+.sub-accordion {
+     border-bottom: 1px solid black;
+}

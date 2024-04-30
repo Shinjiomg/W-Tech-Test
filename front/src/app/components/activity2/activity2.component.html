@@ -1,0 +1,94 @@
+<div class="head">
+    <p class="title">Actividad 2</p>
+</div>
+<div class="border">
+</div>
+
+<mat-card class="blue-border-card">
+    <div class="container">
+        <div class="subtitle">
+            <div class="subcontainer">
+                <mat-icon style="color: #005883;">help_outline</mat-icon>
+                <p class="title-container">Ejercicio 2</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <form>
+            <p style="font-size: 1.125rem; line-height: 1.75rem;">Seleccionar las respuestas correctas.</p>
+            <li style="margin-top: .5rem; font-size: 18px;">¿Cuál es la diferencia fundamental entre un argumento
+                deductivo y un
+                argumento inductivo?
+                <mat-radio-group name="argumentos" (change)="onSelectionChange()">
+                    <div class="group-radio">
+                        <mat-radio-button value="a">
+                            <label class="label-radio">Los argumentos deductivos se basan en premisas que
+                                otorgan un grado de
+                                probabilidad a la conclusión, mientras que los argumentos inductivos garantizan la
+                                verdad de
+                                la
+                                conclusión.</label>
+                        </mat-radio-button>
+                    </div>
+                    <div class="group-radio">
+                        <mat-radio-button value="b">
+                            <label class="label-radio">Los argumentos deductivos son siempre inválidos,
+                                mientras que los
+                                argumentos
+                                inductivos son siempre fuertes.</label>
+                        </mat-radio-button>
+                    </div>
+                    <div class="group-radio">
+                        <mat-radio-button value="c">
+                            <label class="label-radio">La diferencia radica en que los argumentos
+                                deductivos no requieren
+                                premisas,
+                                mientras que los inductivos sí.</label>
+                        </mat-radio-button>
+                    </div>
+                    <div class="group-radio">
+                        <mat-radio-button value="d">
+                            <label class="label-radio">Los argumentos deductivos aseguran que la verdad
+                                de las premisas
+                                conduce
+                                necesariamente a la verdad de la conclusión, mientras que los argumentos inductivos
+                                otorgan
+                                un
+                                grado de probabilidad a la conclusión.</label>
+                        </mat-radio-button>
+                    </div>
+                </mat-radio-group>
+            <li style="margin-top: .5rem; font-size: 18px;">¿Qué aspecto de los argumentos NO será evaluado en la prueba
+                de comunicación escrita, según lo
+                establecido en el texto?
+                <mat-radio-group name="aspectos"  (change)="onSelectionChange()">
+                    <div class="group-radio">
+                        <mat-radio-button value="1">
+                            <label class="label-radio">La corrección de su presentación formal.</label>
+                        </mat-radio-button>
+                    </div>
+                    <div class="group-radio">
+                        <mat-radio-button value="2">
+                            <label class="label-radio">La claridad de su expresión.</label>
+                        </mat-radio-button>
+                    </div>
+                    <div class="group-radio">
+                        <mat-radio-button value="3">
+                            <label class="label-radio">La validez de los argumentos.</label>
+                        </mat-radio-button>
+                    </div>
+                    <div class="group-radio">
+                        <mat-radio-button value="4">
+                            <label class="label-radio">La pertinencia de los argumentos para justificar
+                                el punto central del
+                                escrito.</label>
+                        </mat-radio-button>
+                    </div>
+                </mat-radio-group>
+        </form>
+        <div class="finish">
+            <button mat-raised-button class="finish-button" [disabled]="!isButtonEnabled()">Comprobar</button>
+        </div>
+    </div>
+</mat-card>
